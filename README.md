@@ -1,12 +1,10 @@
 # CppExperience
 Name | Description | Definition
 ------------ | ------------- | -------------
-all_of | Test condition on all elements in range | template <class InputIterator, class UnaryPredicate>  <br/> bool all_of (InputIterator first, InputIterator last, UnaryPredicate pred);
-any_of | Test if any element in range fulfills condition | template <class InputIterator, class UnaryPredicate> <br/>
-  bool any_of (InputIterator first, InputIterator last, UnaryPredicate pred);
-  
-|none_of |Test if no elements fulfill condition| |template <class InputIterator, class UnaryPredicate>
-  bool none_of (InputIterator first, InputIterator last, UnaryPredicate pred);|
+all_of | Test condition on all elements in range | template <class InputIterator, class UnaryPredicate><br/>bool all_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+any_of | Test if any element in range fulfills condition | template <class InputIterator, class UnaryPredicate><br/>bool any_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+none_of | Test if no elements fulfill condition | template <class InputIterator, class UnaryPredicate><br/>bool none_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+
 |for_each |Apply function to range| |template <class InputIterator, class Function>
    Function for_each (InputIterator first, InputIterator last, Function fn);|
 |find |Find value in range| |template <class InputIterator, class T>
