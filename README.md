@@ -1,91 +1,53 @@
 # CppExperience
 Name | Description | Definition
 ------------ | ------------- | -------------
-all_of | Test condition on all elements in range | template <class InputIterator, class UnaryPredicate><br/>bool all_of (InputIterator first, InputIterator last, UnaryPredicate pred);
-any_of | Test if any element in range fulfills condition | template <class InputIterator, class UnaryPredicate><br/>bool any_of (InputIterator first, InputIterator last, UnaryPredicate pred);
-none_of | Test if no elements fulfill condition | template <class InputIterator, class UnaryPredicate><br/>bool none_of (InputIterator first, InputIterator last, UnaryPredicate pred);
-for_each |Apply function to range | template <class InputIterator, class Function><br/>Function for_each (InputIterator first, InputIterator last, Function fn)
-find | Find value in range | template <class InputIterator, class T><br/>InputIterator find (InputIterator first, InputIterator last, const T& val)
-find_if | Find element in range | template <class InputIterator, class UnaryPredicate><br/>InputIterator find_if (InputIterator first, InputIterator last, UnaryPredicate pred)
-find_if_not | Find element in range (negative condition) | template <class InputIterator, class UnaryPredicate>
-   InputIterator find_if_not (InputIterator first, InputIterator last, UnaryPredicate pred)
-find_end | Find last subsequence in range | equality (1)<br/>template <class ForwardIterator1, class ForwardIterator2><br/>ForwardIterator1 find_end (ForwardIterator1 first1, ForwardIterator1 last1,
-                              ForwardIterator2 first2, ForwardIterator2 last2);</br>predicate (2)<br/>template <class ForwardIterator1, class ForwardIterator2, class BinaryPredicate><br/>
+all_of | Test condition on all elements in range | bool all_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+any_of | Test if any element in range fulfills condition | bool any_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+none_of | Test if no elements fulfill condition | bool none_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+for_each |Apply function to range | Function for_each (InputIterator first, InputIterator last, Function fn)
+find | Find value in range | InputIterator find (InputIterator first, InputIterator last, const T& val)
+find_if | Find element in range | InputIterator find_if (InputIterator first, InputIterator last, UnaryPredicate pred)
+find_if_not | Find element in range (negative condition) | InputIterator find_if_not (InputIterator first, InputIterator last, UnaryPredicate pred)
+find_end | Find last subsequence in range | ForwardIterator1 find_end (ForwardIterator1 first1, ForwardIterator1 last1,
+                              ForwardIterator2 first2, ForwardIterator2 last2);<br>
    ForwardIterator1 find_end (ForwardIterator1 first1, ForwardIterator1 last1,
-                              ForwardIterator2 first2, ForwardIterator2 last2,
-                              BinaryPredicate pred)
-find_first_of |Find element from set in range | equality (1)
-template <class ForwardIterator1, class ForwardIterator2>
+                              ForwardIterator2 first2, ForwardIterator2 last2, BinaryPredicate pred)
+find_first_of | Find element from set in range | 
    ForwardIterator1 find_first_of (ForwardIterator1 first1, ForwardIterator1 last1,
-                                   ForwardIterator2 first2, ForwardIterator2 last2);
-predicate (2)
-template <class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
+                                   ForwardIterator2 first2, ForwardIterator2 last2);<br/>
    ForwardIterator1 find_first_of (ForwardIterator1 first1, ForwardIterator1 last1,
                                    ForwardIterator2 first2, ForwardIterator2 last2,
-                                   BinaryPredicate pred);
-
-equality (1)
-template <class InputIterator, class ForwardIterator>
+                                   BinaryPredicate pred);<br/>
    InputIterator find_first_of (InputIterator first1, InputIterator last1,
-                                   ForwardIterator first2, ForwardIterator last2);
-predicate (2)
-template <class InputIterator, class ForwardIterator, class BinaryPredicate>
+                                   ForwardIterator first2, ForwardIterator last2);<br/>
    InputIterator find_first_of (InputIterator first1, InputIterator last1,
-                                   ForwardIterator first2, ForwardIterator last2,
-                                   BinaryPredicate pred)
-adjacent_find |Find equal adjacent elements in range | equality (1)
-template <class ForwardIterator>
+                                   ForwardIterator first2, ForwardIterator last2,BinaryPredicate pred)
+adjacent_find | Find equal adjacent elements in range | 
    ForwardIterator adjacent_find (ForwardIterator first, ForwardIterator last);
-predicate (2)
-template <class ForwardIterator, class BinaryPredicate>
-   ForwardIterator adjacent_find (ForwardIterator first, ForwardIterator last,
-                                  BinaryPredicate pred)
-count |Count appearances of value in range | template <class InputIterator, class T>
-  typename iterator_traits<InputIterator>::difference_type
-    count (InputIterator first, InputIterator last, const T& val)
-count_if |Return number of elements in range satisfying condition | template <class InputIterator, class UnaryPredicate>
-  typename iterator_traits<InputIterator>::difference_type
+   ForwardIterator adjacent_find (ForwardIterator first, ForwardIterator last,BinaryPredicate pred)
+count | Count appearances of value in range | typename iterator_traits<InputIterator>::difference_type
+                                                   count (InputIterator first, InputIterator last, const T& val)
+count_if | Return number of elements in range satisfying condition | typename iterator_traits<InputIterator>::difference_type
     count_if (InputIterator first, InputIterator last, UnaryPredicate pred)
-mismatch |Return first position where two ranges differ | equality (1)
-template <class InputIterator1, class InputIterator2>
-  pair<InputIterator1, InputIterator2>
-    mismatch (InputIterator1 first1, InputIterator1 last1,
-              InputIterator2 first2);
-predicate (2)
-template <class InputIterator1, class InputIterator2, class BinaryPredicate>
-  pair<InputIterator1, InputIterator2>
-    mismatch (InputIterator1 first1, InputIterator1 last1,
+mismatch | Return first position where two ranges differ | pair<InputIterator1, InputIterator2> mismatch (InputIterator1 first1, InputIterator1 last1,InputIterator2 first2);<br/>
+  pair<InputIterator1, InputIterator2> mismatch (InputIterator1 first1, InputIterator1 last1,InputIterator2 first2,BinaryPredicate pred)
+equal | Test whether the elements in two ranges are equal | bool equal (InputIterator1 first1, InputIterator1 last1, InputIterator2 first2);<br/>
+ bool equal (InputIterator1 first1, InputIterator1 last1,
               InputIterator2 first2, BinaryPredicate pred)
-equal |Test whether the elements in two ranges are equal | equality (1)
-template <class InputIterator1, class InputIterator2>
-  bool equal (InputIterator1 first1, InputIterator1 last1,
-              InputIterator2 first2);
-predicate (2)
-template <class InputIterator1, class InputIterator2, class BinaryPredicate>
-  bool equal (InputIterator1 first1, InputIterator1 last1,
-              InputIterator2 first2, BinaryPredicate pred)
-is_permutation |Test whether range is permutation of another | equality (1)
-template <class ForwardIterator1, class ForwardIterator2>
+is_permutation | Test whether range is permutation of another |
    bool is_permutation (ForwardIterator1 first1, ForwardIterator1 last1,
-                        ForwardIterator2 first2);
-predicate (2)
-template <class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
+                        ForwardIterator2 first2);<br/>
    bool is_permutation (ForwardIterator1 first1, ForwardIterator1 last1,
                         ForwardIterator2 first2, BinaryPredicate pred)
-search |Search range for subsequence | equality (1)
-template <class ForwardIterator1, class ForwardIterator2>
+search | Search range for subsequence |
    ForwardIterator1 search (ForwardIterator1 first1, ForwardIterator1 last1,
-                            ForwardIterator2 first2, ForwardIterator2 last2);
-predicate (2)
-template <class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
+                            ForwardIterator2 first2, ForwardIterator2 last2);<br/>
    ForwardIterator1 search (ForwardIterator1 first1, ForwardIterator1 last1,
                             ForwardIterator2 first2, ForwardIterator2 last2,
                             BinaryPredicate pred)
-search_n |Search range for elements | equality (1)
-template <class ForwardIterator, class Size, class T>
+search_n | Search range for elements |
    ForwardIterator search_n (ForwardIterator first, ForwardIterator last,
-                             Size count, const T& val);
-predicate (2)
+                             Size count, const T& val);<br/>
 template <class ForwardIterator, class Size, class T, class BinaryPredicate>
    ForwardIterator search_n ( ForwardIterator first, ForwardIterator last,
                               Size count, const T& val, BinaryPredicate pred )
