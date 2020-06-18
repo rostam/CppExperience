@@ -17,11 +17,10 @@ equal | Test whether the elements in two ranges are equal
 is_permutation | Test whether range is permutation of another
 search | Search range for subsequence
 search_n | Search range for elements
-
-copy | Copy range of elements|
-copy_n | Copy elements|
-copy_if | Copy certain elements of range|
-copy_backward | Copy range of elements backward|
+copy | Copy range of elements
+copy_n | Copy elements
+copy_if | Copy certain elements of range
+copy_backward | Copy range of elements backward
 move | Move range of elements|
 move_backward | Move range of elements backward|
 swap | Exchange values of two objects|
