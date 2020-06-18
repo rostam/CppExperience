@@ -2,7 +2,7 @@
 
 First Header | Second Header | Third Header
 ------------ | ------------- | -------------
-all_of | Test condition on all elements in range | template <class InputIterator, class UnaryPredicate>  \n bool all_of (InputIterator first, InputIterator last, UnaryPredicate pred);
+all_of | Test condition on all elements in range | template <class InputIterator, class UnaryPredicate>  <br/> bool all_of (InputIterator first, InputIterator last, UnaryPredicate pred);
 
 
 any_of | Test if any element in range fulfills condition | template <class InputIterator, class UnaryPredicate>
