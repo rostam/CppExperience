@@ -9,9 +9,7 @@ find | Find value in range | InputIterator find (InputIterator first, InputItera
 find_if | Find element in range | InputIterator find_if (InputIterator first, InputIterator last, UnaryPredicate pred)
 find_if_not | Find element in range (negative condition) | InputIterator find_if_not (InputIterator first, InputIterator last, UnaryPredicate pred)
 find_end | Find last subsequence in range | ForwardIterator1 find_end (ForwardIterator1 first1, ForwardIterator1 last1,
-                              ForwardIterator2 first2, ForwardIterator2 last2);<br>
-   ForwardIterator1 find_end (ForwardIterator1 first1, ForwardIterator1 last1,
-                              ForwardIterator2 first2, ForwardIterator2 last2, BinaryPredicate pred)
+                              ForwardIterator2 first2, ForwardIterator2 last2);<br>ForwardIterator1 find_end (ForwardIterator1 first1, ForwardIterator1 last1,ForwardIterator2 first2, ForwardIterator2 last2, BinaryPredicate pred)
 find_first_of | Find element from set in range | 
    ForwardIterator1 find_first_of (ForwardIterator1 first1, ForwardIterator1 last1,
                                    ForwardIterator2 first2, ForwardIterator2 last2);<br/>
